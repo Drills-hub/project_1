@@ -47,10 +47,12 @@ while True:
 
         # 정답을 맞춘 뒤 다시 시작을 질문
         elif num_user == random_num:
-            score.append({count+1})
+            score.append(count+1)
             print(f"축합니다. 정답입니다! {count+1}번 만에 맞추셨습니다!! ")
             print(f" 최고 기록은 {high_score(score)} 입니다.")
             restart = input("다시 시작 하시겠습니까?(y/n): ").lower()
+            count = 0
+
             if restart == "n":
                 break
             elif restart == "y":
